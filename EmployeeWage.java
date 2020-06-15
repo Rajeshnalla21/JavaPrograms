@@ -3,7 +3,7 @@ public class EmployeeWage {
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
 
-	public static int computeEmpWage(int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth) {
+	public static int computeEmpWage( String company, int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth) {
 		//Variables
 		int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
       //Computation
@@ -22,14 +22,15 @@ public class EmployeeWage {
                empHrs = 0;
          }
          totalEmpHrs += empHrs;
-         System.out.println("Day#:" + totalWorkingDays + " Employee Hours: " + empHrs);
+         System.out.println("Day#:" + totalWorkingDays +"Company is "+ company + " Employee Hours: " + empHrs);
       }
       int totalEmpWage = totalEmpHrs * empRatePerHours;
-      System.out.println("Total Employee Wage for Company is: "+ totalEmpWage);
+      System.out.println("Total Employee Wage for Company is: "+ company +" is: "+ totalEmpWage);
 		return totalEmpWage;
 	}
 
 	public static void main(String[] args) {
-		computeEmpWage( 20, 20, 100);
+		computeEmpWage( "Bridgelabz",20, 20, 100);
+		computeEmpWage( "Java",12, 30, 200);
 	}
 }

@@ -1,12 +1,12 @@
 public class EmployeeWage {
-	//Constans
+	
 	public static final int IS_PART_TIME = 1;
 	public static final int IS_FULL_TIME = 2;
 
-	public static int computeEmpWage( String company, int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth) {
-		//Variables
+	public static int calculateEmpWage( String company, int empRatePerHours, int numOfWorkingDays, int maxHoursPerMonth) {
+	
 		int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-      //Computation
+      
       System.out.println("Welcome to Employee Wage Computation");
       while (totalEmpHrs <=  maxHoursPerMonth && totalWorkingDays < numOfWorkingDays) {
          totalWorkingDays++;
@@ -30,7 +30,7 @@ public class EmployeeWage {
 	}
 
 	public static void main(String[] args) {
-		computeEmpWage( "Bridgelabz",20, 20, 100);
-		computeEmpWage( "Java",12, 30, 200);
+		calculateEmpWage( "Bridgelabz",20, 20, 100);
+		calculateEmpWage( "Java",12, 30, 200);
 	}
 }
